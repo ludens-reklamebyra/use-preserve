@@ -1,22 +1,7 @@
-# usePreserve
+import * as React from 'react';
+import { storiesOf } from '@storybook/react';
+import usePreserve from '../src/index';
 
-LocalStorage hook combined with `preserve`!
-
-## Installation
-
-```sh
-npm install @ludens-reklame/use-preserve
-```
-
-or with yarn
-
-```sh
-yarn add @ludens-reklame/use-preserve
-```
-
-## Basic usage
-
-```ts
 function App() {
   const [storageCounter, setStorageCounter] = usePreserve('myKey', 0);
 
@@ -32,4 +17,5 @@ function App() {
     </>
   );
 }
-```
+
+storiesOf('Layout', module).add('Basic usage', () => <App />);
